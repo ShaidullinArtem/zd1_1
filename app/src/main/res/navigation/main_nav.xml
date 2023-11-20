@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.zd1_1.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_fragment2"
+            app:destination="@id/fragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragment3"
+            app:destination="@id/fragment3" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragment4"
+            app:destination="@id/fragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.example.zd1_1.Fragment2"
+        android:label="fragment_2"
+        tools:layout="@layout/fragment_2" >
+        <action
+            android:id="@+id/action_fragment2_to_homeFragment3"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.example.zd1_1.Fragment3"
+        android:label="fragment_3"
+        tools:layout="@layout/fragment_3" >
+        <action
+            android:id="@+id/action_fragment3_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.example.zd1_1.Fragment4"
+        android:label="fragment_4"
+        tools:layout="@layout/fragment_4" >
+        <action
+            android:id="@+id/action_fragment4_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
